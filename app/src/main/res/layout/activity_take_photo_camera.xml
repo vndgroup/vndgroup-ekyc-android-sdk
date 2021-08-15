@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription">
+
+    <TextView
+        android:id="@+id/text_view_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Ảnh chân dung" />
+
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/preview_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginVertical="24dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/text_view_message"
+        app:layout_constraintDimensionRatio="3:4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_title"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <View
+        android:id="@+id/view_overlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ic_selfie_frame"
+        app:layout_constraintBottom_toBottomOf="@id/preview_view"
+        app:layout_constraintEnd_toEndOf="@id/preview_view"
+        app:layout_constraintStart_toStartOf="@id/preview_view"
+        app:layout_constraintTop_toTopOf="@id/preview_view"
+        tools:layout_marginHorizontal="@dimen/selfie_border_margin_horizontal"
+        tools:layout_marginVertical="@dimen/selfie_border_margin_vertical" />
+
+    <TextView
+        android:id="@+id/text_view_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginVertical="24dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/preview_view"
+        tools:text="Supermarket Flowers" />
+</androidx.constraintlayout.widget.ConstraintLayout>
