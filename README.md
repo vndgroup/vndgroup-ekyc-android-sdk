@@ -36,6 +36,12 @@ Android v5.0 & newer
 
 
 # USAGE
+## Initialize EKYCManager:
+- Init EKYCManager in your Application class's onCreate() method:
+```        
+EKYCManager.initialize()
+```
+
 ## Initialize CameraX:
 ```
  val cameraManager = CameraManager.Builder()
