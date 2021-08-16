@@ -3,7 +3,6 @@
 - Use AndroidX.
 
 # INTEGRATION
-```
 - Import EKYC AAR file into project. You can follow this [instruction](https://developer.android.com/studio/projects/android-library#psd-add-aar-jar-dependency).
 - Add required dependencies below into your app-level build.grade file:
 ```
@@ -34,7 +33,6 @@
         }
     }
 ```
-
 
 # USAGE
 ## Initialize EKYCManager:
